@@ -18,25 +18,25 @@
                 <x-input id="password" type="password" name="password" required autocomplete="current-password" />                
             </div>
         </div>
-        <div class="flex items-center justify-between mt-6">
-            @if (Route::has('password.request'))
+        <div class="mt-6">
+            {{-- @if (Route::has('password.request'))
                 <div class="mr-1">
                     <a class="text-sm underline hover:no-underline" href="{{ route('password.request') }}">
                         {{ __('¿Olvidaste la contraseña?') }}
                     </a>
                 </div>
-            @endif            
-            <x-button class="ml-3">
+            @endif             --}}
+            <x-button class="w-full">
                 {{ __('Inicia sesión') }}
             </x-button>            
         </div>
     </form>
     <x-validation-errors class="mt-4" />   
     <!-- Footer -->
-    <div class="pt-5 mt-6 border-t border-slate-200 dark:border-slate-700">
+    {{-- <div class="pt-5 mt-6 border-t border-slate-200 dark:border-slate-700">
         <div class="text-sm">
             {{ __('¿No tienes una cuenta?') }} <a class="font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400" href="{{ route('register') }}">{{ __('Registrate') }}</a>
         </div>
         
-    </div>
+    </div> --}}
 </x-authentication-layout>
