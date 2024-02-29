@@ -521,7 +521,7 @@
                 </ul> --}}
             </div>
             <!-- More group -->
-            <div>
+            {{-- <div>
                 <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
                     <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Más opciones</span>
@@ -578,7 +578,7 @@
                             </ul>
                         </div>
                     </li>
-                    {{-- <!-- Onboarding -->
+                    <!-- Onboarding -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0" x-data="{ open: false }">
                         <a class="block text-slate-200 transition duration-150" :class="open ? 'hover:text-slate-200' : 'hover:text-white'" href="#0" @click.prevent="sidebarExpanded ? open = !open : sidebarExpanded = true">
                             <div class="flex items-center justify-between">
@@ -710,9 +710,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </li> --}}
+                    </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
 
         <!-- Expand / collapse button -->
