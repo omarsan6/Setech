@@ -15,13 +15,13 @@ class DashboardController extends Controller
     }
 
     /**
-     * Displays the analytics screen
+     * Displays the usuarios screen
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function analytics()
+    public function usuarios()
     {
-        return view('pages/dashboard/analytics');
+        return view('pages/dashboard/usuarios');
     }
 
     /**
