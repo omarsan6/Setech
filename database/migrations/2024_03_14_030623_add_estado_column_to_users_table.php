@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //creando la tabla caja
-        Schema::create('caja', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
+        Schema::table('users', function (Blueprint $table) {
+            //
             $table->integer('estado')->default(1);
-            $table->timestamps();
+            $table->foreignId('caja_id')->nullable()->constrained()->onDelete('cascade');
         });
     }
 
@@ -25,6 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('caja');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->dropColumn(['estado','caja_id']);
+        });
     }
 };

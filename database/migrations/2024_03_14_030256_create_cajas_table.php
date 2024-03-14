@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //Agregar columna estado
+        Schema::create('cajas', function (Blueprint $table) {
+            $table->id();
+            $table->string('caja');
             $table->integer('estado')->default(1);
+            $table->timestamps();
         });
     }
 
@@ -22,9 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //Eliminando columna estado
-            $table->dropColumn('estado');
-        });
+        Schema::dropIfExists('cajas');
     }
 };
